@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math - Subject</title>
+  <link rel="stylesheet" href="/src/subject.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="../images/logo.png" alt="Balaswecha Logo">
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="arjs.html">AR.js</a></li>
+      <li><a href="reach.html">Reach Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div id="subject-menu">
+    <ul>
+      <li><a href="math.html" class="active">Math</a></li>
+      <li><a href="physics.html">Physics</a></li>
+      <li><a href="chemistry.html">Chemistry</a></li>
+      <li><a href="biology.html">Biology</a></li>
+      <li><a href="social.html">Social</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="animals.html">Animals</a></li>
+    </ul>
+  </div>
+
+  <div id="subject-container">
+    <h1>Math</h1>
+    <div class="cards-container">
+      <div class="card" data-topic="cube">
+        <img src="../math/cube.png" alt="Cube">
+        <h3>Cube</h3>
+        <p>Click to learn more about cubess.</p>
+      </div>
+      <div class="card">
+        <img src="../images/triangle.png" alt="Triangle">
+        <h3>Triangle</h3>
+        <p>Click to learn more about triangles.</p>
+      </div>
+      <div class="card">
+        <img src="../images/square.png" alt="Square">
+        <h3>Square</h3>
+        <p>Click to learn more about squares.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal for Expanded View -->
+<div id="modal" class="hidden">
+  <div class="modal-content">
+    <button class="close-btn">X</button>
+    <h2 id="modal-title">Cone</h2>
+    <div class="modal-images">
+      <img src="../math/cube.png" alt="Cone Image 1">
+      <img src="../matharmarker/cubearmarker.png" alt="Cone Image 2">
+    </div>
+    <p id="modal-description">
+      A cone is a three-dimensional geometric shape that tapers smoothly from a flat base to a point called the apex or vertex.
+      It is commonly used in mathematics, physics, and everyday objects.
+    </p>
+  </div>
+</div>
+
+<script type="module" src="/src/subject.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101820; /* Dark Charcoal */
+    color: #FEE715; /* Bright Yellow */
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #FEE715;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #FFFFFF; /* Highlight the active page */
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: #FEE715; /* Bright Yellow background */
+}
+
+/* Left Section (Text Content) */
+#about-balaswecha {
+    width: 50%;
+    color: #101820; /* Dark Charcoal */
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+#about-balaswecha h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about-balaswecha ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+#about-balaswecha ul li {
+    margin-bottom: 10px;
+}
+
+/* Right Section (Image Grid) */
+#activities-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    width: 45%;
+}
+
+#activities-gallery .gallery-item {
+    background: #101820; /* Dark Charcoal */
+    border: 5px solid #FEE715; /* Bright Yellow border */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#activities-gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #101820;
+    color: #FEE715;
+}

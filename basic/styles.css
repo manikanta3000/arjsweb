@@ -1,0 +1,82 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101820; /* Dark Charcoal */
+    color: #FEE715; /* Bright Yellow */
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 40px; /* Adjust the logo size */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #FEE715; /* Bright Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFFFFF; /* Add white for hover effect */
+}
+
+/* Main Content */
+main {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space between the two sections */
+    align-items: center; /* Align items vertically in the center */
+    height: calc(100vh - 50px); /* Full height minus header height */
+    background-color: #FEE715; /* Bright Yellow background */
+    padding: 20px 50px; /* Add padding for spacing */
+}
+
+/* Right Section (Text Content) */
+#about-balaswecha {
+    width: 45%; /* Adjust the width for the text section */
+    color: #101820; /* Dark Charcoal for text */
+    font-size: 1.2rem; /* Slightly larger font size */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: left; /* Align text to the left */
+}
+
+/* Left Section (Dark Box) */
+#viewer-container {
+    width: 45%; /* Adjust the width for the dark box */
+    height: 70%; /* Keep the height consistent */
+    background: #101820; /* Dark Charcoal */
+    border: 5px solid #FEE715; /* Bright Yellow border */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content inside if needed */
+}
+
+
+
+
+
+/* Footer (Optional) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #101820; /* Dark Charcoal */
+    color: #FEE715; /* Bright Yellow */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

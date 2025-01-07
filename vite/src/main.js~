@@ -1,0 +1,91 @@
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
+let scene, camera, renderer;
+
+// Initialize Three.js scene
+function initScene() {
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+}
+
+// Animate function for rendering
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+
+// Logic for Homepage
+function homepageLogic() {
+    console.log("Running Homepage logic");
+
+    // Example: Add a simple cube
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    // Position the camera
+    camera.position.z = 5;
+
+    animate();
+}
+
+// Logic for AR.js Page
+function arjsLogic() {
+    console.log("Running AR.js logic");
+
+    // Add light to the AR scene
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(1, 1, 1).normalize();
+    scene.add(light);
+
+    // Load the 3D model
+    const loader = new THREE.GLTFLoader();
+    loader.load(
+        './models/robo.glb',
+        function (gltf) {
+            const model = gltf.scene;
+            model.scale.set(1.5, 1.5, 1.5); // Scale the model
+            model.rotation.y = Math.PI; // Optional: Rotate the model
+            scene.add(model);
+
+            // Cursor follow animation (example)
+            document.addEventListener('mousemove', (event) => {
+                const x = (event.clientX / window.innerWidth) * 2 - 1;
+                const y = -(event.clientY / window.innerHeight) * 2 + 1;
+                model.rotation.y = x * Math.PI; // Rotate model based on cursor X
+                model.rotation.x = y * Math.PI * 0.1; // Rotate model based on cursor Y
+            });
+        },
+        undefined,
+        function (error) {
+            console.error('An error occurred while loading the model:', error);
+        }
+    );
+
+    // Position the camera
+    camera.position.z = 5;
+
+    animate();
+}
+
+// Conditional logic based on the page
+if (window.location.pathname === '/index.html') {
+    initScene();
+    homepageLogic();
+} else if (window.location.pathname === '/arjs.html') {
+    initScene();
+    arjsLogic();
+}
+
+// Resize event listener to handle window resizing
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});

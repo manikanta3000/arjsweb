@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swecha ARJS Website</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="../images/logo.png" alt="Balaswecha Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="#">AR.js</a></li>
+      <li><a href="#">Reach Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<main>
+
+  <!-- Right Section (Text Content) -->
+  <div id="about-balaswecha">
+    <h1>WHAT IS BALASWECHA?</h1>
+    <p>
+      Balaswecha is a revolutionary platform aimed at empowering individuals through
+      innovative tools, cutting-edge technologies, and modern educational resources.
+      It focuses on fostering creativity, collaboration, and impactful learning experiences
+      by leveraging the power of technology. Balaswecha’s mission is to create a sustainable
+      and inclusive digital environment for everyone.
+    </p>
+    <h2>AR IMPLEMENTATION IN THIS WEBSITE</h2>
+    <p>
+      Augmented Reality (AR) is integrated into this website to provide an interactive and
+      engaging user experience. By leveraging AR.js and 3D models, users can visualize
+      real-world objects in a virtual space. This technology bridges the gap between
+      reality and digital innovation, enabling users to explore, learn, and interact with
+      content in a highly immersive way.
+    </p>
+  </div>
+
+  <!-- Left Section (Dark Box) -->
+  <div id="viewer-container"></div>
+
+</main>
+
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101820; /* Dark Charcoal */
+    color: #FEE715; /* Bright Yellow */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #FEE715;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #FFFFFF; /* Highlight the active page */
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: calc(100vh - 70px); /* Full viewport height minus header */
+    background-color: #FEE715; /* Bright Yellow */
+    flex-direction: column;
+}
+
+/* Left Section: Vertical Menu */
+#subject-menu {
+    position: absolute;
+    left: 0;
+    top: 70px; /* Below header */
+    width: 18%;
+    background: #101820; /* Dark Charcoal */
+    height: calc(100vh - 70px);
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#subject-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#subject-menu ul li {
+    margin-bottom: 15px;
+}
+
+#subject-menu ul li a {
+    color: #FEE715;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#subject-menu ul li a:hover,
+#subject-menu ul li a.active {
+    background: #FEE715; /* Bright Yellow */
+    color: #101820; /* Dark Charcoal */
+}
+
+/* Viewer Container */
+#viewer-container {
+    width: 40%; /* Reduced width */
+    height: 40%; /* Reduced height */
+    background: #101820; /* Dark Charcoal */
+    margin:  auto; /* Center horizontally */
+    display: flex;
+    justify-content: center; /* Center content inside the container */
+    align-items: center; /* Center content inside the container */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
